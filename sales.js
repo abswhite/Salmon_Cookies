@@ -1,5 +1,5 @@
 var times = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm'];
-
+/*
 //PIKE
 var locationPike = {
   name: '1st and Pike',
@@ -12,7 +12,7 @@ var locationPike = {
     this.sumCookies.push(result);
     return result;
   }
-  /*
+
   cookiesSum: function() {
     var sum = 0;
     for (var i=0; i <this.sumCookies.length; i++){
@@ -21,9 +21,32 @@ var locationPike = {
   this.sumCookies.push(sum);
   console.log(sum);
   }
-  */
+
+};*/
+
+function location(name, min, max, avgCookies) {
+  this.name = name;
+  this. min = min;
+  this.max = max;
+  this.avgCookies = avgCookies;
 };
 
+var locationPike = new location('1st and Pike', 23, 65, 6.3);
+console.log(locationPike);
+
+var locationAirport = new location('SeaTac Airport', 3, 24, 1.2);
+console.log(locationAirport);
+
+var locationCenter = new location('Seattle Center', 11, 38, 3.7);
+console.log(locationCenter);
+
+var locationCapitolHill = new location('Capitol Hill', 20, 38, 2.3);
+console.log(locationCapitolHill);
+
+var locationAlki = new location('Alki', 2, 16, 4.6);
+console.log(locationAlki);
+
+/*
 var myList = document.getElementById('locationPike');
 
 for (var index = 0; index < times.length; index++) {
@@ -47,7 +70,7 @@ var listElement = document.createElement('li');
 listElement.setAttribute ('class', 'cookieTotal');
 listElement.textContent = 'Total: ' + s + ' cookies';
 locationsTotal.appendChild(listElement);
-
+/*
 //AIRPORT
 var locationAirport = {
   name: 'SeaTac Airport',
@@ -230,4 +253,4 @@ function amtCookies() {
   console.log(amtCookies());
   console.log(locationPike);
 */
-/////////////////////////
+///////////////////////// */
