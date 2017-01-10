@@ -12,17 +12,27 @@ var locationPike = {
     this.sumCookies.push(result);
     return result;
   }
+  /*
+  cookiesSum: function() {
+    var sum = 0;
+    for (var i=0; i <this.sumCookies.length; i++){
+    sum += this.sumCookies[i];
+  }
+  this.sumCookies.push(sum);
+  console.log(sum);
+  }
+  */
 };
 
-var locations1 = document.getElementById('locationPike');
+var myList = document.getElementById('locationPike');
 
 for (var index = 0; index < times.length; index++) {
   console.log(times[index]);
   var listElement = document.createElement('li');
-  listElement.setAttribute = ('class', 'times');
+  listElement.setAttribute ('class', 'times');
   listElement.textContent = times[index] + ': ' +
   locationPike.cookies() + ' cookies';
-  locations1.appendChild(listElement);
+  myList.appendChild(listElement);
 }
 
 var s = 0;
@@ -32,11 +42,11 @@ for(var i = 0; i < locationPike.sumCookies.length; i++) {
 console.log(locationPike.sumCookies);
 console.log(s);
 
-var locationsTotal1 = document.getElementById('locationPike');
+var locationsTotal = document.getElementById('locationPike');
 var listElement = document.createElement('li');
-listElement.setAttribute = ('class', 'times');
+listElement.setAttribute ('class', 'cookieTotal');
 listElement.textContent = 'Total: ' + s + ' cookies';
-locationsTotal1.appendChild(listElement);
+locationsTotal.appendChild(listElement);
 
 //AIRPORT
 var locationAirport = {
@@ -52,15 +62,15 @@ var locationAirport = {
   }
 };
 
-var locations2 = document.getElementById('locationAirport');
+var myList = document.getElementById('locationAirport');
 
 for (var index = 0; index < times.length; index++) {
   console.log(times[index]);
   var listElement = document.createElement('li');
-  listElement.setAttribute = ('class', 'times');
+  listElement.setAttribute ('class', 'times');
   listElement.textContent = times[index] + ': ' +
   locationAirport.cookies() + ' cookies';
-  locations2.appendChild(listElement);
+  myList.appendChild(listElement);
 }
 
 var s = 0;
@@ -70,11 +80,11 @@ for(var i = 0; i < locationAirport.sumCookies.length; i++) {
 console.log(locationAirport.sumCookies);
 console.log(s);
 
-var locationsTotal2 = document.getElementById('locationAirport');
+var locationsTotal = document.getElementById('locationAirport');
 var listElement = document.createElement('li');
-listElement.setAttribute = ('class', 'times');
+listElement.setAttribute ('class', 'cookieTotal');
 listElement.textContent = 'Total: ' + s + ' cookies';
-locationsTotal2.appendChild(listElement);
+locationsTotal.appendChild(listElement);
 
 // Center
 var locationCenter = {
@@ -90,15 +100,15 @@ var locationCenter = {
   }
 };
 
-var locations3 = document.getElementById('locationCenter');
+var myList = document.getElementById('locationCenter');
 
 for (var index = 0; index < times.length; index++) {
   console.log(times[index]);
   var listElement = document.createElement('li');
-  listElement.setAttribute = ('class', 'times');
+  listElement.setAttribute ('class', 'times');
   listElement.textContent = times[index] + ': ' +
   locationCenter.cookies() + ' cookies';
-  locations3.appendChild(listElement);
+  myList.appendChild(listElement);
 }
 
 var s = 0;
@@ -108,12 +118,11 @@ for(var i = 0; i < locationCenter.sumCookies.length; i++) {
 console.log(locationCenter.sumCookies);
 console.log(s);
 
-var locationsTotal3 = document.getElementById('locationCenter');
-
+var locationsTotal = document.getElementById('locationCenter');
 var listElement = document.createElement('li');
-listElement.setAttribute = ('class', 'times');
+listElement.setAttribute ('class', 'cookieTotal');
 listElement.textContent = 'Total: ' + s + ' cookies';
-locationsTotal3.appendChild(listElement);
+locationsTotal.appendChild(listElement);
 
 //Capitol Hill
 var locationCapitolHill = {
@@ -129,15 +138,15 @@ var locationCapitolHill = {
   }
 };
 
-var locations4 = document.getElementById('locationCapitolHill');
+var myList = document.getElementById('locationCapitolHill');
 
 for (var index = 0; index < times.length; index++) {
   console.log(times[index]);
   var listElement = document.createElement('li');
-  listElement.setAttribute = ('class', 'times');
+  listElement.setAttribute ('class', 'times');
   listElement.textContent = times[index] + ': ' +
   locationCapitolHill.cookies() + ' cookies';
-  locations4.appendChild(listElement);
+  myList.appendChild(listElement);
 }
 
 var s = 0;
@@ -147,12 +156,11 @@ for(var i = 0; i < locationCapitolHill.sumCookies.length; i++) {
 console.log(locationPike.sumCookies);
 console.log(s);
 
-var locationsTotal4 = document.getElementById('locationCapitolHill');
-
+var locationsTotal = document.getElementById('locationCapitolHill');
 var listElement = document.createElement('li');
-listElement.setAttribute = ('class', 'times');
+listElement.setAttribute ('class', 'cookieTotal');
 listElement.textContent = 'Total: ' + s + ' cookies';
-locationsTotal4.appendChild(listElement);
+locationsTotal.appendChild(listElement);
 
 //Alki
 var locationAlki = {
@@ -168,14 +176,14 @@ var locationAlki = {
   }
 };
 
-var locations5 = document.getElementById('locationAlki');
+var myList = document.getElementById('locationAlki');
 
 for (var index = 0; index < times.length; index++) {
   console.log(times[index]);
   var listElement = document.createElement('li');
-  listElement.setAttribute = ('class', 'times');
-  listElement.textContent = 'Total: ' + locationAlki.cookies() + ' cookies';
-  locations5.appendChild(listElement);
+  listElement.setAttribute ('class', 'times');
+  listElement.textContent = times[index] + ': ' + locationAlki.cookies() + ' cookies';
+  myList.appendChild(listElement);
 }
 
 var s = 0;
@@ -185,12 +193,11 @@ for(var i = 0; i < locationAlki.sumCookies.length; i++) {
 console.log(locationAlki.sumCookies);
 console.log(s);
 
-var locationsTotal5 = document.getElementById('locationAlki');
-
+var locationsTotal = document.getElementById('locationAlki');
 var listElement = document.createElement('li');
-listElement.setAttribute = ('class', 'times');
+listElement.setAttribute ('class', 'cookieTotal');
 listElement.textContent = 'Total: ' + s + ' cookies';
-locationsTotal5.appendChild(listElement);
+locationsTotal.appendChild(listElement);
 
 /*var locationPike = {
   name: '1st and Pike',
