@@ -37,7 +37,7 @@ var listElement = document.createElement('li');
 listElement.setAttribute = ('class', 'times');
 listElement.textContent = 'Total: ' + s + ' cookies';
 locationsTotal1.appendChild(listElement);
-/*
+
 //AIRPORT
 var locationAirport = {
   name: 'SeaTac Airport',
@@ -63,10 +63,17 @@ for (var index = 0; index < times.length; index++) {
   locations2.appendChild(listElement);
 }
 
+var s = 0;
+for(var i = 0; i < locationAirport.sumCookies.length; i++) {
+  s += locationAirport.sumCookies[i];
+};
+console.log(locationAirport.sumCookies);
+console.log(s);
+
 var locationsTotal2 = document.getElementById('locationAirport');
 var listElement = document.createElement('li');
 listElement.setAttribute = ('class', 'times');
-listElement.textContent = 'Total: ' + locationAirport.cookies() + ' cookies';
+listElement.textContent = 'Total: ' + s + ' cookies';
 locationsTotal2.appendChild(listElement);
 
 // Center
@@ -94,11 +101,18 @@ for (var index = 0; index < times.length; index++) {
   locations3.appendChild(listElement);
 }
 
+var s = 0;
+for(var i = 0; i < locationCenter.sumCookies.length; i++) {
+  s += locationCenter.sumCookies[i];
+};
+console.log(locationCenter.sumCookies);
+console.log(s);
+
 var locationsTotal3 = document.getElementById('locationCenter');
 
 var listElement = document.createElement('li');
 listElement.setAttribute = ('class', 'times');
-listElement.textContent = 'Total: ' + locationCenter.cookies() + ' cookies';
+listElement.textContent = 'Total: ' + s + ' cookies';
 locationsTotal3.appendChild(listElement);
 
 //Capitol Hill
@@ -126,11 +140,18 @@ for (var index = 0; index < times.length; index++) {
   locations4.appendChild(listElement);
 }
 
+var s = 0;
+for(var i = 0; i < locationCapitolHill.sumCookies.length; i++) {
+  s += locationCapitolHill.sumCookies[i];
+};
+console.log(locationPike.sumCookies);
+console.log(s);
+
 var locationsTotal4 = document.getElementById('locationCapitolHill');
 
 var listElement = document.createElement('li');
 listElement.setAttribute = ('class', 'times');
-listElement.textContent = 'Total: ' + locationCapitolHill.sum4 + ' cookies';
+listElement.textContent = 'Total: ' + s + ' cookies';
 locationsTotal4.appendChild(listElement);
 
 //Alki
@@ -157,7 +178,19 @@ for (var index = 0; index < times.length; index++) {
   locations5.appendChild(listElement);
 }
 
-var locationsTotal5 = document.getElementById('location');
+var s = 0;
+for(var i = 0; i < locationAlki.sumCookies.length; i++) {
+  s += locationAlki.sumCookies[i];
+};
+console.log(locationAlki.sumCookies);
+console.log(s);
+
+var locationsTotal5 = document.getElementById('locationAlki');
+
+var listElement = document.createElement('li');
+listElement.setAttribute = ('class', 'times');
+listElement.textContent = 'Total: ' + s + ' cookies';
+locationsTotal5.appendChild(listElement);
 
 /*var locationPike = {
   name: '1st and Pike',
