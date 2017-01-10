@@ -22,29 +22,38 @@ var avgCookies = [6.3, 1.2];
 
 function amtCookies() {
   locationPike.push(Math.floor(Math.random() * (maxCustomers[0] - minCustomers[0] + 1)) + minCustomers[0]) * avgCookies[0];}
+
+  function amtCookies() {
+    locationPike.push(Math.floor(Math.random() * (locationPike[2] - locationPike[1] + 1)) + locationPike[1]) * locationPike[3];
+  }
+  console.log(amtCookies());
+  console.log(locationPike);
 */
 /////////////////////////
-var locationPike = ['1st and Pike', 23, 65, 6.3];
-console.log(locationPike);
-
-function amtCookies() {
-  locationPike.push(Math.floor(Math.random() * (locationPike[2] - locationPike[1] + 1)) + locationPike[1]) * locationPike[3];
-}
-console.log(amtCookies());
-console.log(locationPike);
+var locationPike = {
+  name: '1st and Pike',
+  min: 23,
+  max: 65,
+  avgCookies: 6.3,
+  cookies: function() {
+    return Math.round(Math.floor(Math.random() * ((this.max - this.min)) + this.min) * this.avgCookies);
+  }
+};
+console.log(locationPike.cookies);
 
 var times = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm'];
 
-var locations = document.getElementById('locationPike');
+var locations1 = document.getElementById('locationPike');
 
 for (var index = 0; index < times.length; index++) {
   console.log(times[index]);
   var listElement = document.createElement('li');
   listElement.setAttribute = ('class', 'times');
   listElement.textContent = times[index] + ': ' +
-  locationPike.push(Math.floor(Math.random() * (locationPike[2] - locationPike[1] + 1)) + locationPike[1]) * locationPike[3];
-  locations.appendChild(listElement);
+  locationPike.cookies() + ' cookies';
+  locations1.appendChild(listElement);
 }
+
 /*
 //random # of customers
 function customers() {
