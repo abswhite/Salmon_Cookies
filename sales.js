@@ -23,30 +23,24 @@ var locationPike = {
   }
 
 };*/
-
-function location(name, min, max, avgCookies) {
+//GENERAL FUNCTION CREATED
+function location(name, min, max, avgCookies, sumCookies) {
   this.name = name;
   this. min = min;
   this.max = max;
   this.avgCookies = avgCookies;
+  this.sumCookies = sumCookies;
 };
-
-var locationPike = new location('1st and Pike', 23, 65, 6.3);
+//ADD 'COOKIESSUM' FUNCTION TO 'LOCATION'
+location.prototype.cookies = function() {
+  var result = Math.round(Math.floor(Math.random() * ((this.max - this.min)) + this.min) * this.avgCookies);
+  this.sumCookies.push(result);
+  return result;
+};
+//'LOCATIONPIKE' INSTANCE OF 'LOCATION'
+var locationPike = new location('1st and Pike', 23, 65, 6.3, []);
 console.log(locationPike);
 
-var locationAirport = new location('SeaTac Airport', 3, 24, 1.2);
-console.log(locationAirport);
-
-var locationCenter = new location('Seattle Center', 11, 38, 3.7);
-console.log(locationCenter);
-
-var locationCapitolHill = new location('Capitol Hill', 20, 38, 2.3);
-console.log(locationCapitolHill);
-
-var locationAlki = new location('Alki', 2, 16, 4.6);
-console.log(locationAlki);
-
-/*
 var myList = document.getElementById('locationPike');
 
 for (var index = 0; index < times.length; index++) {
@@ -70,7 +64,23 @@ var listElement = document.createElement('li');
 listElement.setAttribute ('class', 'cookieTotal');
 listElement.textContent = 'Total: ' + s + ' cookies';
 locationsTotal.appendChild(listElement);
+
+
+//OBJECTS OF OTHER LOCATIONS
 /*
+var locationAirport = new location('SeaTac Airport', 3, 24, 1.2, []);
+console.log(locationAirport);
+
+var locationCenter = new location('Seattle Center', 11, 38, 3.7, []);
+console.log(locationCenter);
+
+var locationCapitolHill = new location('Capitol Hill', 20, 38, 2.3, []);
+console.log(locationCapitolHill);
+
+var locationAlki = new location('Alki', 2, 16, 4.6, []);
+console.log(locationAlki);
+*/
+
 //AIRPORT
 var locationAirport = {
   name: 'SeaTac Airport',
