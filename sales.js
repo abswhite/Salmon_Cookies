@@ -1,4 +1,3 @@
-var times = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm'];
 /*
 //PIKE
 var locationPike = {
@@ -24,6 +23,8 @@ var locationPike = {
 
 };*/
 //GENERAL FUNCTION CREATED
+var times = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm'];
+
 function Location(name, min, max, avgCookies, arrayCookies) {
   this.name = name;
   this. min = min;
@@ -37,6 +38,7 @@ Location.prototype.cookies = function() {
   this.arrayCookies.push(result);
   return result;
 };
+
  /*
 Location.prototype.cookiesSum = function() {
   var sum = 0;
