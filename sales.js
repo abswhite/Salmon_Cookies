@@ -1,4 +1,4 @@
-var times = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm'];
+var times = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', 'Total'];
 /*
 //PIKE
 var locationPike = {
@@ -24,21 +24,41 @@ var locationPike = {
 
 };*/
 //GENERAL FUNCTION CREATED
-function location(name, min, max, avgCookies, sumCookies) {
+function Location(name, min, max, avgCookies, arrayCookies) {
   this.name = name;
-  this. min = min;
+  this.min = min;
   this.max = max;
   this.avgCookies = avgCookies;
-  this.sumCookies = sumCookies;
+  this.arrayCookies = arrayCookies;
 };
 //ADD 'COOKIESSUM' FUNCTION TO 'LOCATION'
-location.prototype.cookies = function() {
+Location.prototype.cookies = function() {
   var result = Math.round(Math.floor(Math.random() * ((this.max - this.min)) + this.min) * this.avgCookies);
-  this.sumCookies.push(result);
+  this.arrayCookies.push(result);
   return result;
 };
+
+Location.prototype.cookiesSum = function() {
+  var sum = 0;
+  for (var i = 0; i < this.arrayCookies.length - 1; i++) {
+    sum += this.arrayCookies[i];
+  }
+  this.arrayCookies.push[sum];
+  console.log(sum);
+};
+//
+
+//Add function for adding the sumCookies array
+/*Location.prototype.sum = function() {
+  var sum = 0;
+  for (var i = 0; i < this.times.length; i++){
+    sum += this.sumCookies[i];
+  }
+  console.log(sum);
+};*/
+
 //'LOCATIONPIKE' INSTANCE OF 'LOCATION'
-var locationPike = new location('1st and Pike', 23, 65, 6.3, []);
+var locationPike = new Location('1st and Pike', 23, 65, 6.3, [], []);
 console.log(locationPike);
 
 var myList = document.getElementById('locationPike');
@@ -51,36 +71,38 @@ for (var index = 0; index < times.length; index++) {
   locationPike.cookies() + ' cookies';
   myList.appendChild(listElement);
 }
-
-var s = 0;
+/*
+//sum array
+var sum = 0;
 for(var i = 0; i < locationPike.sumCookies.length; i++) {
-  s += locationPike.sumCookies[i];
+  sum += locationPike.sumCookies[i];
 };
 console.log(locationPike.sumCookies);
-console.log(s);
+console.log(sum);
 
 var locationsTotal = document.getElementById('locationPike');
 var listElement = document.createElement('li');
 listElement.setAttribute ('class', 'cookieTotal');
-listElement.textContent = 'Total: ' + s + ' cookies';
+listElement.textContent = 'Total: ' + sum + ' cookies';
 locationsTotal.appendChild(listElement);
 
-
-//OBJECTS OF OTHER LOCATIONS
-/*
-var locationAirport = new location('SeaTac Airport', 3, 24, 1.2, []);
+//AIRPORT LOCATION
+var locationAirport = new Location('SeaTac Airport', 3, 24, 1.2, []);
 console.log(locationAirport);
 
-var locationCenter = new location('Seattle Center', 11, 38, 3.7, []);
+//SEATTLE CENTER
+var locationCenter = new Location('Seattle Center', 11, 38, 3.7, []);
 console.log(locationCenter);
 
-var locationCapitolHill = new location('Capitol Hill', 20, 38, 2.3, []);
+//CAPITOL HILL
+var locationCapitolHill = new Location('Capitol Hill', 20, 38, 2.3, []);
 console.log(locationCapitolHill);
 
-var locationAlki = new location('Alki', 2, 16, 4.6, []);
+//ALKI
+var locationAlki = new Location('Alki', 2, 16, 4.6, []);
 console.log(locationAlki);
-*/
 
+/*
 //AIRPORT
 var locationAirport = {
   name: 'SeaTac Airport',
