@@ -1,4 +1,4 @@
-var times = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', 'Total'];
+var times = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm'];
 /*
 //PIKE
 var locationPike = {
@@ -26,7 +26,7 @@ var locationPike = {
 //GENERAL FUNCTION CREATED
 function Location(name, min, max, avgCookies, arrayCookies) {
   this.name = name;
-  this.min = min;
+  this. min = min;
   this.max = max;
   this.avgCookies = avgCookies;
   this.arrayCookies = arrayCookies;
@@ -37,15 +37,15 @@ Location.prototype.cookies = function() {
   this.arrayCookies.push(result);
   return result;
 };
-
+ /*
 Location.prototype.cookiesSum = function() {
   var sum = 0;
-  for (var i = 0; i < this.arrayCookies.length - 1; i++) {
+  for (var i = 0; i < this.arrayCookies.length; i++) {
     sum += this.arrayCookies[i];
   }
-  this.arrayCookies.push[sum];
+  this.Location.arrayCookies[sum];
   console.log(sum);
-};
+};*/
 //
 
 //Add function for adding the sumCookies array
@@ -58,7 +58,7 @@ Location.prototype.cookiesSum = function() {
 };*/
 
 //'LOCATIONPIKE' INSTANCE OF 'LOCATION'
-var locationPike = new Location('1st and Pike', 23, 65, 6.3, [], []);
+var locationPike = new Location('1st and Pike', 23, 65, 6.3, []);
 console.log(locationPike);
 
 var myList = document.getElementById('locationPike');
@@ -71,13 +71,14 @@ for (var index = 0; index < times.length; index++) {
   locationPike.cookies() + ' cookies';
   myList.appendChild(listElement);
 }
-/*
+
 //sum array
 var sum = 0;
-for(var i = 0; i < locationPike.sumCookies.length; i++) {
-  sum += locationPike.sumCookies[i];
+for(var i = 0; i < locationPike.arrayCookies.length; i++) {
+  sum += locationPike.arrayCookies[i];
+  console.log(sum);
 };
-console.log(locationPike.sumCookies);
+console.log(locationPike.arrayCookies);
 console.log(sum);
 
 var locationsTotal = document.getElementById('locationPike');
