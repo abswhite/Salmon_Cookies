@@ -31,7 +31,7 @@ for (var index = 0; index < times.length; index++) {
   listElement.setAttribute ('class', 'times');
   listElement.textContent = times[index] + ': ' +
   locationPike.cookies() + ' cookies';
-  myList.appendChild(listElement);
+  //myList.appendChild(listElement);
 }
 
 //sum array
@@ -46,7 +46,7 @@ var locationsTotal = document.getElementById('locationPike');
 var listElement = document.createElement('li');
 listElement.setAttribute ('class', 'cookieTotal');
 listElement.textContent = 'Total: ' + s + ' cookies';
-locationsTotal.appendChild(listElement);
+//locationsTotal.appendChild(listElement);
 
 //AIRPORT LOCATION
 var locationAirport = new Location('SeaTac Airport', 3, 24, 1.2, []);
@@ -60,7 +60,7 @@ for (var index = 0; index < times.length; index++) {
   listElement.setAttribute ('class', 'times');
   listElement.textContent = times[index] + ': ' +
   locationAirport.cookies() + ' cookies';
-  myList.appendChild(listElement);
+  //myList.appendChild(listElement);
 }
 
 var s = 0;
@@ -74,7 +74,7 @@ var locationsTotal = document.getElementById('locationAirport');
 var listElement = document.createElement('li');
 listElement.setAttribute ('class', 'cookieTotal');
 listElement.textContent = 'Total: ' + s + ' cookies';
-locationsTotal.appendChild(listElement);
+//locationsTotal.appendChild(listElement);
 
 //SEATTLE CENTER
 var locationCenter = new Location('Seattle Center', 11, 38, 3.7, []);
@@ -88,7 +88,7 @@ for (var index = 0; index < times.length; index++) {
   listElement.setAttribute ('class', 'times');
   listElement.textContent = times[index] + ': ' +
   locationCenter.cookies() + ' cookies';
-  myList.appendChild(listElement);
+  //myList.appendChild(listElement);
 }
 
 var s = 0;
@@ -102,7 +102,7 @@ var locationsTotal = document.getElementById('locationCenter');
 var listElement = document.createElement('li');
 listElement.setAttribute ('class', 'cookieTotal');
 listElement.textContent = 'Total: ' + s + ' cookies';
-locationsTotal.appendChild(listElement);
+//locationsTotal.appendChild(listElement);
 
 //CAPITOL HILL
 var locationCapitolHill = new Location('Capitol Hill', 20, 38, 2.3, []);
@@ -116,7 +116,7 @@ for (var index = 0; index < times.length; index++) {
   listElement.setAttribute ('class', 'times');
   listElement.textContent = times[index] + ': ' +
   locationCapitolHill.cookies() + ' cookies';
-  myList.appendChild(listElement);
+  //myList.appendChild(listElement);
 }
 
 var s = 0;
@@ -130,7 +130,7 @@ var locationsTotal = document.getElementById('locationCapitolHill');
 var listElement = document.createElement('li');
 listElement.setAttribute ('class', 'cookieTotal');
 listElement.textContent = 'Total: ' + s + ' cookies';
-locationsTotal.appendChild(listElement);
+//locationsTotal.appendChild(listElement);
 
 //ALKI
 var locationAlki = new Location('Alki', 2, 16, 4.6, []);
@@ -143,7 +143,7 @@ for (var index = 0; index < times.length; index++) {
   var listElement = document.createElement('li');
   listElement.setAttribute ('class', 'times');
   listElement.textContent = times[index] + ': ' + locationAlki.cookies() + ' cookies';
-  myList.appendChild(listElement);
+  //myList.appendChild(listElement);
 }
 
 var s = 0;
@@ -157,7 +157,7 @@ var locationsTotal = document.getElementById('locationAlki');
 var listElement = document.createElement('li');
 listElement.setAttribute ('class', 'cookieTotal');
 listElement.textContent = 'Total: ' + s + ' cookies';
-locationsTotal.appendChild(listElement);
+//locationsTotal.appendChild(listElement);
 
 ////////////
 
