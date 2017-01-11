@@ -2,6 +2,8 @@
 //GENERAL FUNCTION CREATED
 var times = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm'];
 
+var totals = [];
+
 function Location(name, min, max, avgCookies, arrayCookies) {
   this.name = name;
   this. min = min;
@@ -32,18 +34,17 @@ for (var index = 0; index < times.length; index++) {
 }
 
 //sum array
-var sum = 0;
+var s = 0;
 for(var i = 0; i < locationPike.arrayCookies.length; i++) {
-  sum += locationPike.arrayCookies[i];
-  console.log(sum);
+  s += locationPike.arrayCookies[i];
 };
-console.log(locationPike.arrayCookies);
-console.log(sum);
+totals.push(s);
+console.log(totals);
 
 var locationsTotal = document.getElementById('locationPike');
 var listElement = document.createElement('li');
 listElement.setAttribute ('class', 'cookieTotal');
-listElement.textContent = 'Total: ' + sum + ' cookies';
+listElement.textContent = 'Total: ' + s + ' cookies';
 locationsTotal.appendChild(listElement);
 
 //AIRPORT LOCATION
@@ -65,8 +66,8 @@ var s = 0;
 for(var i = 0; i < locationAirport.arrayCookies.length; i++) {
   s += locationAirport.arrayCookies[i];
 };
-console.log(locationAirport.arrayCookies);
-console.log(s);
+totals.push(s);
+console.log(totals);
 
 var locationsTotal = document.getElementById('locationAirport');
 var listElement = document.createElement('li');
@@ -93,8 +94,8 @@ var s = 0;
 for(var i = 0; i < locationCenter.arrayCookies.length; i++) {
   s += locationCenter.arrayCookies[i];
 };
-console.log(locationCenter.arrayCookies);
-console.log(s);
+totals.push(s);
+console.log(totals);
 
 var locationsTotal = document.getElementById('locationCenter');
 var listElement = document.createElement('li');
@@ -121,8 +122,8 @@ var s = 0;
 for(var i = 0; i < locationCapitolHill.arrayCookies.length; i++) {
   s += locationCapitolHill.arrayCookies[i];
 };
-console.log(locationPike.arrayCookies);
-console.log(s);
+totals.push(s);
+console.log(totals);
 
 var locationsTotal = document.getElementById('locationCapitolHill');
 var listElement = document.createElement('li');
@@ -148,8 +149,8 @@ var s = 0;
 for(var i = 0; i < locationAlki.arrayCookies.length; i++) {
   s += locationAlki.arrayCookies[i];
 };
-console.log(locationAlki.arrayCookies);
-console.log(s);
+totals.push(s);
+console.log(totals);
 
 var locationsTotal = document.getElementById('locationAlki');
 var listElement = document.createElement('li');
@@ -161,11 +162,17 @@ locationsTotal.appendChild(listElement);
 
 //times , arrayCookies
 locationPike.arrayCookies.unshift('1st and Pike');
+locationPike.arrayCookies.push(totals[0]);
 locationCenter.arrayCookies.unshift('Seattle Center');
+locationCenter.arrayCookies.push(totals[2]);
 locationAirport.arrayCookies.unshift('SeaTac Airport');
+locationAirport.arrayCookies.push(totals[1]);
 locationCapitolHill.arrayCookies.unshift('Capitol Hill');
+locationCapitolHill.arrayCookies.push(totals[3]);
 locationAlki.arrayCookies.unshift('Alki');
+locationAlki.arrayCookies.push(totals[4]);
 times.unshift('');
+times.push('');
 
 var totalArray = [times, locationPike.arrayCookies, locationAirport.arrayCookies, locationCenter.arrayCookies, locationCapitolHill.arrayCookies, locationAlki.arrayCookies];
 console.log(totalArray);
