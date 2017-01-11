@@ -165,8 +165,9 @@ locationCenter.arrayCookies.unshift('Seattle Center');
 locationAirport.arrayCookies.unshift('SeaTac Airport');
 locationCapitolHill.arrayCookies.unshift('Capitol Hill');
 locationAlki.arrayCookies.unshift('Alki');
+times.unshift('');
 
-var totalArray = [['','6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm'], locationPike.arrayCookies, locationCenter.arrayCookies, locationAirport.arrayCookies, locationCapitolHill.arrayCookies, locationAlki.arrayCookies];
+var totalArray = [times, locationPike.arrayCookies, locationAirport.arrayCookies, locationCenter.arrayCookies, locationCapitolHill.arrayCookies, locationAlki.arrayCookies];
 console.log(totalArray);
 
 var tableEl = document.getElementById('cookie-table');
