@@ -173,7 +173,7 @@ locationCapitolHill.arrayCookies.push(totals[3]);
 locationAlki.arrayCookies.unshift('Alki');
 locationAlki.arrayCookies.push(totals[4]);
 times.unshift('');
-times.push('');
+times.push('Total');
 
 var totalArray = [locationPike.arrayCookies, locationAirport.arrayCookies, locationCenter.arrayCookies, locationCapitolHill.arrayCookies, locationAlki.arrayCookies];
 console.log(totalArray);
