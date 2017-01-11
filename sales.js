@@ -174,10 +174,18 @@ locationAlki.arrayCookies.push(totals[4]);
 times.unshift('');
 times.push('');
 
-var totalArray = [times, locationPike.arrayCookies, locationAirport.arrayCookies, locationCenter.arrayCookies, locationCapitolHill.arrayCookies, locationAlki.arrayCookies];
+var totalArray = [locationPike.arrayCookies, locationAirport.arrayCookies, locationCenter.arrayCookies, locationCapitolHill.arrayCookies, locationAlki.arrayCookies];
 console.log(totalArray);
 
 var tableEl = document.getElementById('cookie-table');
+
+for(var index = 0; index < times.length; index++) {
+  var headData = times[index];
+  var headEl = document.createElement('th');
+  headEl.textContent = headData;
+  console.log(headEl);
+  tableEl.appendChild(headEl);
+}
 
 for(var i = 0; i < totalArray.length; i++) {
   var rowData = totalArray[i];
