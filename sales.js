@@ -1,24 +1,51 @@
 'use strict';
 
 //GENERAL FUNCTION CREATED
-var times = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm'];
+var times = ['','6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm'];
 
-var totals = [];
-
+//Location Object
 function Location(name, min, max, avgCookies) {
   this.name = name;
   this. min = min;
   this.max = max;
   this.avgCookies = avgCookies;
   this.arrayCookies = [];
-};
-//ADD 'COOKIESSUM' FUNCTION TO 'LOCATION'
-Location.prototype.cookies = function() {
-  var result = Math.round(Math.floor(Math.random() * ((this.max - this.min)) + this.min) * this.avgCookies);
-  this.arrayCookies.push(result);
-  return result;
+  this.arraySum = [];
 };
 
+//Create arrayCookies
+Location.prototype.cookies = function() {
+  for (var i = 0; i < locationPike.arrayCookies.length; i++) {
+    var result = Math.round(Math.floor(Math.random() * ((this.max - this.min)) + this.min) * this.avgCookies);
+    this.arrayCookies.push(result);
+    return result;
+  }
+};
+
+//Totals
+Location.prototype.totals = function() {
+  var sum = 0;
+  for (var i = 0; i < locationPike.arrayCookies.length; i++) {
+    sum += locationPike.arrayCookies[i];
+    this.arraySum.push(sum);
+    return sum;
+    console.log(sum);
+  };
+};
+
+Location.prototype.table = function() {
+  for (var j = 0; j < times.length; j++) {
+    console.log(times[j]);
+    var tableElement = document.createElement('td');
+    listElement.textContent = times[j];
+    myList.appendChild(tableElement);
+  }
+};
+
+var locationPike = new Location('1st and Pike', 23, 65, 6.3);
+console.log(locationPike);
+
+/*
 //'LOCATIONPIKE' INSTANCE OF 'LOCATION'
 var locationPike = new Location('1st and Pike', 23, 65, 6.3, []);
 console.log(locationPike);
@@ -296,3 +323,4 @@ for(var i = 0; i < totalArray.length; i++) {
 
   tableEl.appendChild(rowEl);
 };
+*/
