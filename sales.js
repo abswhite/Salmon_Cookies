@@ -18,7 +18,7 @@ function Location(name, min, max, avgCookies) {
 //Create arrayCookies
 Location.prototype.cookies = function() {
   for (var i = 0; i < times.length; i++) {
-    var result = Math.round((Math.floor(Math.random() * ((this.max - this.min)) + this.min)) * this.avgCookies);
+    var result = Math.round((Math.random() * ((this.max - this.min)) + this.min) * this.avgCookies);
     console.log(result);
     this.arrayCookies.push(result);
   }
