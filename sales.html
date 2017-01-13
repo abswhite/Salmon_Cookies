@@ -4,25 +4,25 @@
   <link rel=stylesheet type="text/css" href="sales.css" />
 </header>
 <body>
-  <h1>Cookie Table</h1> 
+  <h1>Cookie Table</h1>
   <table id="cookie-table">
   </table>
-
-  <h1> Pike </h1>
-  <ul id="locationPike"></ul>
-
-  <h1> Airport</h1>
-  <ul id="locationAirport"></ul>
-
-  <h1> Center</h1>
-  <ul id="locationCenter"></ul>
-
-  <h1> Capitol Hill</h1>
-  <ul id="locationCapitolHill"></ul>
-
-  <h1> Alki</h1>
-  <ul id="locationAlki"></ul>
-
+  <section id="cookie-section">
+    <form id="cookie-form">
+      <fieldset>
+        <legend>Cookie Form</legend>
+        <label name="name">Name</label>
+        <input name="name" if="name-input" type="text" placeholder="Name"/>
+        <label name="min">Minimum Customers</label>
+        <input name="min" if="min-input" type="text" placeholder="Minimum Customers">
+        <label name="max">Maximum Customers</label>
+        <input name="max" if="max-input" type="text" placeholder="Maximum Customers">
+        <label name="avgCookies">Average Cookies</label>
+        <input name="avgCookies" if="avgCookies-input" type="text" placeholder="Average Cookies Sold">
+        <button id="submit-button" type="submit">SUBMIT</button>
+      </fieldset>
+    </form>
+  </section>
 <script src="sales.js" type="text/javascript"></script>
 </body>
 </html>
