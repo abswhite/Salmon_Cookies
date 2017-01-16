@@ -71,10 +71,11 @@ function renderTotals() {
   var cookieTable = document.getElementById('cookie-table');
 
   var totalsRow = document.createElement('tr');
-  var blankElement = document.createElement('td');
+  var blankElement = document.createElement('th');
+  blankElement.textContent = 'Totals';
   totalsRow.appendChild(blankElement);
 
-  for (var i = 0; i < times1.length; i++) {
+  for (var i = 0; i < times1.length - 1; i++) {
     var totalsHours = 0;
     var totalsFooter = [];
 
@@ -106,9 +107,9 @@ Location.prototype.render = function() {
     cookieRow.appendChild(tableElement);
   }
 
-  var rowTotals = document.createElement('td');
-  rowTotals.textContent = this.totalCookies;
-  cookieRow.appendChild(rowTotals);
+  // var rowTotals = document.createElement('td');
+  // rowTotals.textContent = this.totalCookies;
+  // cookieRow.appendChild(rowTotals);
 
   cookieTable.appendChild(cookieRow);
 };
@@ -150,6 +151,8 @@ locationAlki.totals();
 locationAlki.render();
 arrLocations.push(locationAlki);
 
+renderTotals();
+
 //New Location
 var formEl = document.getElementById('cookie-form');
 
@@ -172,7 +175,6 @@ formEl.addEventListener('submit', function(event) {
   locationNew.totals();
   locationNew.render();
   arrLocations.push(locationNew);
+  renderTotals();
 
 });
-
-//renderTotals();
