@@ -1,43 +1,103 @@
 body {
   background-color: #BF5FFF;
-  font-family: georgia;
+  font-family: "Open Sans Condensed";
   color: 	#FFFF99;
   font-size: 16px;
 }
 
+p {
+  font-size: 16px;
+}
+
+.salmon {
+  width: 20%;
+  height: 20%;
+  margin-left: 20px;
+}
+
 #title {
-  font-family: "Gloria Hallelujah", cursive;
-  font-size: 4em;
+  font-family: "Bungee Shade", cursive;
+  font-size: 5em;
   margin-bottom: 10px;
-  color: #2E0854;
+  color: #6B238E;
 }
 
 #header {
-  text-align: center
+  text-align: center;
+  border: 6px dotted #FFFFE0;
+  padding: 5px 5px 5px 5px;
+  background-color: #FFF68F	;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+#hours {
+  width: 200px;
+  margin-left: 15%;
+  margin-right: 10px;
+  background-color: #FFF68F;
+  border: 15px dashed white;
+}
+
+#hours-head {
+    color: #BF5FFF;
+}
+
+#hours-text {
+    color: #6B238E;
+    text-align: center;
 }
 
 img {
   margin-top: 10px
 }
 
+#locations-links {
+  width: 500px;
+  margin-left: 20px;
+  margin-right: 10%;
+}
+
 .sub-title {
-  font-family: verdana;
+  font-family: "Fira Sans Extra Condensed";
   color: 	#FFFF66;
+  font-size: 2.5em;
+  text-align: center;
 }
 
 .box {
   background-color: #6B238E;
   padding: 20px 20px 20px 20px;
   margin-top: 20px;
-  margin-left: 10px;
-  width: 45%;
+  margin-right: auto;
+  margin-left: auto;
+  width: 70%;
+  border: 2px dashed white;
+  block: inline;
   float: left;
-  border-radius: 20px;
-  border: 2px solid white;
+}
+
+.box1 {
+  background-color: #6B238E;
+  padding: 20px 20px 20px 20px;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 70%;
+  border: 2px dashed white;
+}
+
+#cookies-img {
+  width: 70%;
+  height: auto;
+  border: 2px dashed white;
+  margin-right: auto;
+  margin-left: 15%;
 }
 
 a {
 color: white;
+text-decoration: none;
 }
 
 .info {
@@ -48,4 +108,19 @@ color: white;
   width: 45%;
   border-radius: 20px;
   border: 2px solid white;
+}
+
+#totals-link {
+  background-color: #FFF68F;
+  padding: 0px 0px 0px 0px;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 70%;
+  border: 4px dashed white;
+  color: #6B238E;
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Bungee Shade";
 }
