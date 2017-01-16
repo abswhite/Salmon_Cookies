@@ -151,8 +151,6 @@ locationAlki.totals();
 locationAlki.render();
 arrLocations.push(locationAlki);
 
-renderTotals();
-
 //New Location
 var formEl = document.getElementById('cookie-form');
 
@@ -175,6 +173,9 @@ formEl.addEventListener('submit', function(event) {
   locationNew.totals();
   locationNew.render();
   arrLocations.push(locationNew);
+
   renderTotals();
 
 });
+
+renderTotals();
