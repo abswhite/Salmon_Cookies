@@ -1,12 +1,12 @@
 #cookie-table {
   margin-top: 30px;
-  color: black;
+  color: #FFF68F;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   border: 6px dotted #FFFFE0;
   padding: 5px 5px 5px 5px;
-  background-color: #FFF68F	;
+  background-color: #6B238E;
 }
 
 fieldset {
@@ -17,6 +17,7 @@ fieldset {
 
 td {
   border: 1px solid black;
+  font-size: 20px;
 }
 
 .cookieTotal {
@@ -25,16 +26,26 @@ td {
 
 body {
   background-color: #BF5FFF;
-  font-family: georgia;
+  font-family: "Open Sans Condensed";
   color: 	#FFFF99;
   font-size: 16px;
 }
 
-h1 {
-  font-family: "Gloria Hallelujah", cursive;
-  font-size: 4em;
+p {
+  font-size: 16px;
+}
+
+.salmon {
+  width: 20%;
+  height: 20%;
+  margin-left: 20px;
+}
+
+#title {
+  font-family: "Bungee Shade", cursive;
+  font-size: 5em;
   margin-bottom: 10px;
-  color: #2E0854;
+  color: #6B238E;
 }
 
 #header {
@@ -42,24 +53,32 @@ h1 {
   border: 6px dotted #FFFFE0;
   padding: 5px 5px 5px 5px;
   background-color: #FFF68F	;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
-img {
-  margin-top: 10px
+#hours {
+  width: 200px;
+  margin-left: 15%;
+  margin-right: 10px;
 }
 
-.sub-title {
-  font-family: verdana;
-  color: 	#FFFF66;
-}
-
-.box {
-  background-color: #6B238E;
-  padding: 20px 20px 20px 20px;
+#totals-link {
+  background-color: #FFF68F;
+  padding: 0px 0px 0px 0px;
   margin-top: 20px;
-  margin-left: 10px;
-  width: 45%;
-  float: left;
-  border-radius: 20px;
-  border: 2px solid white;
+  margin-right: auto;
+  margin-left: auto;
+  width: 70%;
+  border: 4px dashed white;
+  color: #6B238E;
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Bungee Shade";
+}
+
+a {
+color: white;
+text-decoration: none;
 }
