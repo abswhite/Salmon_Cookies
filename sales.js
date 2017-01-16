@@ -37,19 +37,6 @@ Location.prototype.totals = function() {
   return sum;
 };
 
-//Render table
-// var renderTimes = function() {
-//   var cookieTable = document.getElementById('cookie-table');
-//
-//   var timesRow = document.createElement('tr');
-//   var timesHead = document.createElement('th');
-//
-//   for (var i = 0; i < times.length; i++) {
-//     var timesElement = document.createElement[i];
-//     timesElement.textContent = times[i];
-//     timesRow.appendChild(timesElement);
-//   }
-// };
 var times1 = ['','6 am', '7 am', '8 am', '9 am', '10 am', '11 am', '12 pm', '1 pm', '2 pm', '3 pm', '4 pm', '5 pm', '6 pm', '7 pm', '8 pm', 'Totals'];
 
 function renderTimes() {
@@ -77,14 +64,11 @@ function renderTotals() {
 
   for (var i = 0; i < times1.length - 1; i++) {
     var totalsHours = 0;
-    var totalsFooter = [];
 
     for (var j = 0; j < arrLocations.length; j++) {
       totalsHours += arrLocations[j].arrayCookies[i];
-      console.log(arrLocations[j].arrayCookies[i]);
     }
     var totalsElement = document.createElement('td');
-  //  totalsFooter.push(totalsHours);
     totalsElement.textContent = totalsHours;
     totalsRow.appendChild(totalsElement);
   }
@@ -101,21 +85,18 @@ Location.prototype.render = function() {
   cookieRow.appendChild(rowHeader);
 
   for (var j = 0; j < this.arrayCookies.length; j++) {
-    console.log(this.arrayCookies[j]);
     var tableElement = document.createElement('td');
     tableElement.textContent = this.arrayCookies[j];
     cookieRow.appendChild(tableElement);
   }
 
-  // var rowTotals = document.createElement('td');
-  // rowTotals.textContent = this.totalCookies;
-  // cookieRow.appendChild(rowTotals);
-
   cookieTable.appendChild(cookieRow);
 };
 
+//Call times
 renderTimes();
 
+//Create and call instances
 var locationPike = new Location('1st and Pike', 23, 65, 6.3);
 console.log(locationPike);
 locationPike.cookies();
@@ -162,10 +143,6 @@ formEl.addEventListener('submit', function(event) {
   var minNew = event.target.min.value;
   var maxNew = event.target.max.value;
   var avgCookiesNew = event.target.avgCookies.value;
-  console.log(nameNew);
-  console.log(minNew);
-  console.log(maxNew);
-  console.log(avgCookiesNew);
 
   var locationNew = new Location(nameNew, minNew, maxNew, avgCookiesNew);
   console.log(locationNew);
