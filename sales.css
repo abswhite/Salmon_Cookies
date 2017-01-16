@@ -1,17 +1,65 @@
 #cookie-table {
-  border: 1px solid black;
-  background-color: #FFFFE0;
+  margin-top: 30px;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border: 6px dotted #FFFFE0;
+  padding: 5px 5px 5px 5px;
+  background-color: #FFF68F	;
+}
+
+fieldset {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 td {
   border: 1px solid black;
 }
 
-body {
-  background-color: #BDA0CB;
-  font-family: monospace;
-}
-
 .cookieTotal {
   color: red;
+}
+
+body {
+  background-color: #BF5FFF;
+  font-family: georgia;
+  color: 	#FFFF99;
+  font-size: 16px;
+}
+
+h1 {
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: 4em;
+  margin-bottom: 10px;
+  color: #2E0854;
+}
+
+#header {
+  text-align: center;
+  border: 6px dotted #FFFFE0;
+  padding: 5px 5px 5px 5px;
+  background-color: #FFF68F	;
+}
+
+img {
+  margin-top: 10px
+}
+
+.sub-title {
+  font-family: verdana;
+  color: 	#FFFF66;
+}
+
+.box {
+  background-color: #6B238E;
+  padding: 20px 20px 20px 20px;
+  margin-top: 20px;
+  margin-left: 10px;
+  width: 45%;
+  float: left;
+  border-radius: 20px;
+  border: 2px solid white;
 }

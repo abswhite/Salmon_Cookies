@@ -32,6 +32,7 @@ Location.prototype.totals = function() {
     sum += this.arrayCookies[i];
     console.log(sum);
   };
+  this.arrayCookies.push(sum);
   this.totalCookies = sum;
   return sum;
 };
@@ -64,6 +65,29 @@ function renderTimes() {
   };
   cookieTable.appendChild(timesRow);
   console.log('im in renderTimes');
+};
+
+function renderTotals() {
+  var cookieTable = document.getElementById('cookie-table');
+
+  var totalsRow = document.createElement('tr');
+  var blankElement = document.createElement('td');
+  totalsRow.appendChild(blankElement);
+
+  for (var i = 0; i < times1.length; i++) {
+    var totalsHours = 0;
+    var totalsFooter = [];
+
+    for (var j = 0; j < arrLocations.length; j++) {
+      totalsHours += arrLocations[j].arrayCookies[i];
+      console.log(arrLocations[j].arrayCookies[i]);
+    }
+    var totalsElement = document.createElement('td');
+  //  totalsFooter.push(totalsHours);
+    totalsElement.textContent = totalsHours;
+    totalsRow.appendChild(totalsElement);
+  }
+  cookieTable.appendChild(totalsRow);
 };
 
 Location.prototype.render = function() {
@@ -150,3 +174,5 @@ formEl.addEventListener('submit', function(event) {
   arrLocations.push(locationNew);
 
 });
+
+//renderTotals();

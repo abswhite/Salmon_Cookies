@@ -13,7 +13,10 @@ body {
 }
 
 #header {
-  text-align: center
+  text-align: center;
+  border: 6px dotted #FFFFE0;
+  padding: 5px 5px 5px 5px;
+  background-color: #FFF68F	;
 }
 
 img {
